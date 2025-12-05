@@ -14,7 +14,7 @@
     "remark-sugar-high": "workspace:*",
     "codice": "^1.5.4",
     "dom-to-image": "^2.6.0",
-    "next": "canary",
+    "next": "^16.0.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "remark": "^15.0.1",
