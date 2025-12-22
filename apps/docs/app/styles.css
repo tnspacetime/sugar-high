@@ -253,6 +253,10 @@ code {
   gap: 8px;
 }
 
+.theme-mode-button--mobile {
+  display: none;
+}
+
 .theme-mode-button {
   background: none;
   border: none;
@@ -375,8 +379,14 @@ code {
     transform: none !important;
     visibility: hidden;
   }
+  .live-editor {
+    margin: 1rem auto 3rem;
+  }
   .live-editor__color {
     display: none;
+  }
+  .theme-mode-button--mobile {
+    display: block;
   }
   .header h1 span {
     font-size: 200%;
@@ -431,28 +441,41 @@ code {
   background-color: #e5e5e5;
   color: #524f4f;
 }
-.editor-token--class {
-  background-color: #2d5e9d;
-  color: #ddd;
+.live-editor-section .editor-token--class {
+  background-color: var(--sh-class);
+  color: #fff;
 }
-.editor-token--keyword {
-  background-color: #f47067;
+.live-editor-section .editor-token--keyword {
+  background-color: var(--sh-keyword);
+  color: #fff;
 }
-.editor-token--string {
-  background-color: #00a99a;
+.live-editor-section .editor-token--string {
+  background-color: var(--sh-string);
+  color: #fff;
 }
-.editor-token--comment {
-  background-color: #a19595;
+.live-editor-section .editor-token--comment {
+  background-color: var(--sh-comment);
+  color: #fff;
 }
-.editor-token--property {
-  background-color: #89aedd;
+.live-editor-section .editor-token--property {
+  background-color: var(--sh-property);
+  color: #fff;
 }
-.editor-token--entity {
-  background-color: #249a97;
+.live-editor-section .editor-token--entity {
+  background-color: var(--sh-entity);
+  color: #fff;
 }
-.editor-token--jsxliterals {
-  background-color: #6266d1;
-  color: #ddd;
+.live-editor-section .editor-token--jsxliterals {
+  background-color: var(--sh-jsxliterals);
+  color: #fff;
+}
+.live-editor-section .editor-token--identifier {
+  background-color: var(--sh-identifier);
+  color: #fff;
+}
+.live-editor-section .editor-token--sign {
+  background-color: var(--sh-sign);
+  color: #fff;
 }
 
 .show-case-title h1 {

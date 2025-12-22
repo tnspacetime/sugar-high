@@ -218,16 +218,25 @@ export default function LiveEditor({
         }
         `}`}</style>
 
-      {process.env.NODE_ENV === 'development' && (
-        <div className="textarea-color-toggle-container">
-          <button
-            onClick={toggleTextareaColor}
-            className={`textarea-color-toggle ${isInspecting ? 'textarea-color-toggle--active' : ''}`}
-          >
-            {buttonText}
-          </button>
-        </div>
-      )}
+      <div className="top-controls">
+        {process.env.NODE_ENV === 'development' && (
+          <div className="textarea-color-toggle-container">
+            <button
+              onClick={toggleTextareaColor}
+              className={`textarea-color-toggle ${isInspecting ? 'textarea-color-toggle--active' : ''}`}
+            >
+              {buttonText}
+            </button>
+          </div>
+        )}
+        <button
+          onClick={toggleTheme}
+          className={`theme-mode-button theme-mode-button--mobile ${isMinimalMode ? 'theme-mode-button--minimal' : 'theme-mode-button--stylish'}`}
+          aria-label={isMinimalMode ? 'Switch to Stylish theme' : 'Switch to Minimal theme'}
+        >
+          {currentTheme.name}
+        </button>
+      </div>
       <div className="flex live-editor">
         <Editor
           ref={editorRef}
